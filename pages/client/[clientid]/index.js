@@ -1,8 +1,13 @@
 import React from 'react'
+import { useRouter } from "next/router";
 
 import { Box, Container, Typography } from "@mui/material";
 
 const ClientID = () => {
+
+	const router = useRouter()
+	console.log(router.query)
+
 	return (
 		<Box>
 			<Container maxwidth="xl">
