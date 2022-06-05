@@ -1,12 +1,17 @@
 import React from 'react'
 import { useRouter } from "next/router";
 
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 
 const ClientID = () => {
 
 	const router = useRouter()
 	console.log(router.query)
+
+	const loadClientWork = () => {
+		// Load...
+		router.push("/client/jose/projectforJose")
+	}
 
 	return (
 		<Box>
@@ -17,6 +22,9 @@ const ClientID = () => {
 				<Typography variant="body1">
 					Lorem ipsum Text Generator
 				</Typography>
+				<Button onClick={loadClientWork} variant="contained">
+					Load Clients Work
+				</Button>
 			</Container>
 		</Box>
 	)

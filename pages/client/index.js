@@ -28,6 +28,23 @@ const Clients = () => {
 							</li>
 						))
 					}
+
+					{/* ALTERNATIVELY */}
+					<br/>
+					<hr/>
+					<br/>
+					{
+						clients.map((el, i) => (
+							<li key={i}>
+								<Link href={{
+									pathname: "/client/[id]",
+									query: { id: el.id }
+								}}>
+									{el.name}
+								</Link>
+							</li>
+						))
+					}
 				</ul>
 			</Container>
 		</Box>
